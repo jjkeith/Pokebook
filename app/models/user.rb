@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
   has_secure_password
-  has_many :cards
+  has_and_belongs_to_many :cards
 
 # Paperclip gem allows users to have a pro pic
   has_attached_file :avatar, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"

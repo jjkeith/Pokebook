@@ -1,2 +1,24 @@
-<h1>Cards#show</h1>
-<p>Find me in app/views/cards/show.html.erb</p>
+<%= render 'partials/navbar' %>
+<p id="notice"><%= notice %></p>
+
+<!-- display the user's name -->
+<p>
+  <strong>User:</strong>
+  <%= @current_user.username %> <br>
+</p>
+
+<!-- display the user's cards -->
+<div class="container">
+
+<p>
+  <% @current_user.cards.each do |c| %>
+  	<h2><%= c.name %></h2>
+  	<p>ID: <%= c.card_id %></p>
+    <p>Type: <%= c.types %></p>
+    <p><%= image_tag(c.imageUrl) %></p>
+  <% end %>
+</p>
+</div>
+<%= link_to 'Edit', edit_user_path(@user) %><!-- add a link to this user's edit page --> |
+<%= link_to 'Home', users_path %><!-- add a link to the index page --> |
+<%= link_to 'Add user', new_user_path %>

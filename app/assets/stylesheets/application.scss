@@ -8,10 +8,12 @@
     margin: 0;
   }
 
-.page-header {
+.jumbotron {
     font-family: 'Exo', sans-serif;
     padding:  10px;
     background-color: yellow;
+    padding: 20px;
+    font-weight: 800;
   }
 
 .logo {
@@ -21,4 +23,9 @@
 .container {
   padding: 10px;
   font-family: 'Exo', sans-serif;
+}
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
 }

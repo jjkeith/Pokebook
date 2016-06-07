@@ -35,3 +35,9 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+
+<%= link_to 'Edit', edit_user_path(@user) %><!-- add a link to this user's edit page --> |
+<%= link_to 'Home', users_path %><!-- add a link to the index page --> |
+<%= link_to 'Add user', new_user_path %>
+<p id="notice"><%= notice %></p>
