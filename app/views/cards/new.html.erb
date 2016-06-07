@@ -1,2 +1,17 @@
-<h1>Cards#new</h1>
-<p>Find me in app/views/cards/new.html.erb</p>
+<h1>New Card</h1>
+
+<%= form_for @card do |f| %>
+	<%= f.label :title %>
+	<%= f.text_field :title %>
+
+	<%= f.label :card_id %>
+	<%= f.text_field :card_id %>
+
+  <%= f.label :types %>
+  <%= f.text_field :types %>
+
+  <%= f.label :imageUrl %>
+  <%= f.text_field :imageUrl %>
+
+	<%= f.submit %>
+<% end %>

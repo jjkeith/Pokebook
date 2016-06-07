@@ -1,28 +1,42 @@
-== README
+#Pokéstash
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+[link to finished page]
 
-Things you may want to cover:
+---
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Pokéstash is a web app designed to allow users to store their Pokémon decks online and view others' decks.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##Screenshots
+
+
+
+##Wireframes
+
+
+##Technologies Used
+- Ruby on Rails
+- PostgreSQL
+- jQuery
+- Bootstrap
+- HTML/CSS
+
+##User Stories
+
+| As a ... | I'd like to ... |
+| ---------|-----------------|
+|User|Login to my account to see my deck|
+|User|Add new entries via a form so the app can store my deck|
+|User|Display my entire deck|
+|User|Be able to see other users' decks|
+|User|Be able to edit my account info/card listing info|
+|User|Login to my account to see my inventory.|
+|User|Be able to sort my deck by type, card id, and alphabetically by Pokémon name|
+|Admin|Be able to delete users.|
+
+##Installation
+
+Just login and start using!
+
+
+##Unsolved Problems
