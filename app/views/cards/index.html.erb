@@ -1,12 +1,22 @@
 <!-- display the user's cards -->
+<%= render 'partials/navbar' %>
+
 <div class="container">
 
-<p>
-  <% @current_user.cards.each do |c| %>
-  	<h2><%= c.name %></h2>
-  	<p>ID: <%= c.card_id %></p>
-    <p>Type: <%= c.types %></p>
-    <p><%= image_tag(c.imageUrl) %></p>
-  <% end %>
-</p>
-</div>
+<% @current_user.cards.in_groups_of(4, false).each do |group| %>
+  <div class='row'>
+    <% group.each do |c| %>
+      <div class='col-md-3'>
+        <div class="thumbnail">
+          <center>
+            <%= image_tag(c.imageUrl) %>
+            <h2><%= c.name %></h2>
+            <p>ID: <%= c.card_id %></p>
+            <p>Type: <%= c.types %></p>
+
+          </center>
+      </div>
+    </div>
+    <% end %>
+  </div>
+<% end %>

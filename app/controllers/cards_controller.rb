@@ -3,6 +3,7 @@ class CardsController < ApplicationController
 
   def index
     @cards = Card.all
+    @user = @current_user
   end
 
   def show

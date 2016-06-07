@@ -1,13 +1,13 @@
-<div class="container">
+<%= render 'partials/navbar' %>
 
-<%= render '/parials/navbar' %>
+<div class="container">
 
 <div class="row">
 
   <a href = '/cards/'>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="assets/Pikachu.png" alt="Pikachu">
+        <img src="/assets/Pikachu.png" alt="Pikachu">
           <div class="caption">
           <center><h3>View Deck</h3></center>
   </a>
@@ -15,10 +15,11 @@
       </div>
     </div>
 
+
   <a href = '/cards/new/'>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="assets/Eevee.png" alt="Eevee">
+        <img src="/assets/Eevee.png" alt="Eevee">
           <div class="caption">
           <center><h3>Add Cards</h3></center>
   </a>
@@ -26,21 +27,18 @@
       </div>
     </div>
 
-  <a href = '/users/edit/'>
+    <%= link_to edit_user_path do %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="assets/Gyarados.png" alt="Gyarados">
+        <img src="/assets/Gyarados.png" alt="Gyarados">
           <div class="caption">
           <center><h3>Edit Account</h3></center>
-  </a>
-        </div>
-      </div>
-    </div>
+    <% end %>
 
   <a href = '/404/'>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="assets/Mewtwo.png" alt="Mewtwo">
+        <img src="/assets/Mewtwo.png" alt="Mewtwo">
         <div class="caption">
           <center><h3>Something</h3></center>
   </a>

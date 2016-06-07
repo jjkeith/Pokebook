@@ -1,6 +1,10 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.padding-where-no-nav {
+  height: 100px;
+}
+
 .navbar {
     font-family: 'Exo', sans-serif;
   }
@@ -11,15 +15,14 @@
 .jumbotron {
     font-family: 'Exo', sans-serif;
     padding:  10px;
-    background-color: yellow;
-    padding: 20px;
+    background-color: #ffe164;
+    margin-bottom: 0;
     font-weight: 800;
   }
 
-.logo {
-  padding: 5px;
+.card {
+  width: 70px;
 }
-
 .container {
   padding: 10px;
   font-family: 'Exo', sans-serif;
