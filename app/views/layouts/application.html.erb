@@ -2,16 +2,16 @@
 <html>
 <head>
   <title>Pokestash</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Exo:400,400italic,800,800italic' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
 
-<%= render 'navbar' %>
+<%= render 'partials/navbar' %>
 
 <div class="page-header yellow">
 <h1>Pokéstash</h1>
