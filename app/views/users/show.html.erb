@@ -1,0 +1,21 @@
+<p id="notice"><%= notice %></p>
+
+<!-- display the user's name -->
+<p>
+  <strong>User:</strong>
+  <%= @user.username %> <br>
+</p>
+
+<!-- display the user's cards -->
+<p>
+  <% @user.cards.each do |c| %>
+  	<h3><%= c.title %></h3>
+  	<p><%= c.card_id %></p>
+    <p><%= c.types %></p>
+    <p><%= c.imageUrl %></p>
+  <% end %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %><!-- add a link to this user's edit page --> |
+<%= link_to 'Home', users_path %><!-- add a link to the index page --> |
+<%= link_to 'Add user', new_user_path %>
