@@ -1,10 +1,13 @@
-<%= form_for @user, :html => {class: 'new_user form-horizontal'} do |f| %>
+<%= form_for @user, url: users_path, html: { multipart: true }  do |f| %>
     <div class="row"><legend class="col-md-4 col-md-offset-4">Create Account:</legend></div>
     <fieldset>
         <div class="form-group">
             <%= f.label :username, 'Username*', class: 'col-md-4 control-label' %>
             <div class="col-md-5">
                 <%= f.text_field :username, class: 'form-control' %>
+            </div>
+            <div class="col-md-5">
+
             </div>
         </div>
         <div class="form-group">
@@ -26,9 +29,14 @@
             </div>
         </div>
         <div class="form-group">
+            <%= f.label :avatar, 'Upload profile pic*', class: 'col-md-4 control-label' %>
+            <%= f.file_field :avatar  %>
+        </div>
+        <div class="form-group">
             <div class="col-md-8 col-md-offset-4">
                 <%= f.submit 'Create Account', class: 'btn btn-success' %>
             </div>
         </div>
+
     </fieldset>
 <% end %>
