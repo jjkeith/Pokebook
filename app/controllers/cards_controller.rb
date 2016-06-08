@@ -38,3 +38,7 @@ class CardsController < ApplicationController
     params.require(:card).permit(:title, :card_id, :types, :imageUrl)
   end
 end
+
+cards/:id/add
+current_user.cards << Card.find(params[:id])
+redirect_to current_user

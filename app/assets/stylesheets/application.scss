@@ -1,27 +1,35 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+body {
+  font-family: 'Exo', sans-serif;
+}
+
 .padding-where-no-nav {
   height: 100px;
 }
 
-.navbar {
-    font-family: 'Exo', sans-serif;
-  }
-.page-header .yellow {
-    margin: 0;
-  }
-
 .jumbotron {
-    font-family: 'Exo', sans-serif;
     padding:  10px;
     background-color: #ffe164;
     margin-bottom: 0;
     font-weight: 800;
   }
 
+.jumbotron:hover {
+  color: #333333;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
+}
+
 .card {
-  width: 70px;
+  width: 120px;
 }
 .container {
   padding: 10px;

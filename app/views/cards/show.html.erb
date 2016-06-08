@@ -12,13 +12,10 @@
 
 <p>
   <% @current_user.cards.each do |c| %>
-  	<h2><%= c.name %></h2>
+  	<h3 class = bold><%= c.name %></h3>
   	<p>ID: <%= c.card_id %></p>
     <p>Type: <%= c.types %></p>
     <p><%= image_tag(c.imageUrl) %></p>
   <% end %>
 </p>
 </div>
-<%= link_to 'Edit', edit_user_path(@user) %><!-- add a link to this user's edit page --> |
-<%= link_to 'Home', users_path %><!-- add a link to the index page --> |
-<%= link_to 'Add user', new_user_path %>

@@ -3,17 +3,18 @@
 
 <div class="container">
 
-<% @current_user.cards.in_groups_of(4, false).each do |group| %>
+<% @current_user.cards.in_groups_of(6, false).each do |group| %>
   <div class='row'>
     <% group.each do |c| %>
-      <div class='col-md-3'>
+      <div class='col-md-2'>
         <div class="thumbnail">
           <center>
-            <%= image_tag(c.imageUrl) %>
-            <h2><%= c.name %></h2>
+            <%= image_tag(c.imageUrl, :class => "card") %>
+            <h4 class='bold'><%= c.name %></h4>
             <p>ID: <%= c.card_id %></p>
             <p>Type: <%= c.types %></p>
-
+            <%= link_to "Delete", destroy_card_path(c) %> |
+            <a href='/404/'>'Give'</a>
           </center>
       </div>
     </div>

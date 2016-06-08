@@ -4,7 +4,8 @@ Rails.application.routes.draw do
 
   resources :users
   patch 'users/:id/edit' => 'users#update'
-  delete 'users/:id' =>   'users#destroy', as: :destroy_user 
+  delete 'users/:id' =>   'users#destroy', as: :destroy_user
+  delete 'cards/:id' =>   'cards#destroy', as: :destroy_card
   resources :cards
   resources :pages
 

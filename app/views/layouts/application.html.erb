@@ -10,11 +10,18 @@
 </head>
 <body>
 
+<%= link_to root_path do %>
   <div class="jumbotron">
-    <%= link_to root_path do %>
-    <center><h1><b>Pokéstash</b></h1></center>
-    <% end %>
+    <div class="row">
+      <div class="col-md-5 col-md-offset-2">
+        <h1 class='bold'>Pokéstash</h1>
+      </div>
+      <div class="col-md-5">
+        <p>Share your Pokémon deck,<br> trade with friends,<br> have fun!</p>
+      </div>
+    </div>
   </div>
+<% end %>
 
 <%= yield %>
 
