@@ -11,12 +11,18 @@
 <body>
 
   <div class="jumbotron">
-    <%= link_to edit_user_path do %>
+    <%= link_to root_path do %>
     <center><h1>Pokéstash</h1></center>
     <% end %>
   </div>
 
 <%= yield %>
+
+<footer class= "footer">
+  <div class="container">
+    <p class = "text-muted">Copyright (c) 2016 JJ Keith All Rights Reserved. </p>
+  </div>
+</footer>
 
 </body>
 </html>
