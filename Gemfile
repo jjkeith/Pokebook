@@ -12,6 +12,10 @@ gem 'bootstrap-sass', '~> 3.3.6'
 
 # photo uploads
 gem "paperclip", "~> 5.0.0.beta1"
+gem 'aws-sdk', '< 2.0'
+
+# allows environmental variables
+gem 'dotenv-rails', :groups => [:development, :test]
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
