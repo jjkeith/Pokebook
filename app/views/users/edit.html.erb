@@ -22,11 +22,8 @@
         <%= f.label :password_confirmation, "Confirmation" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
         <p>
-        <%= f.submit "Save changes", class: "btn btn-warning" %>
+        <%= f.submit "Save changes", class: "btn btn-pokemon" %>
       <% end %>
-
-
-
     </div>
   </div>
 <%= link_to "delete user", destroy_user_path, class: "btn", method: :delete, data: {confirm: "Are you sure?"} %>
