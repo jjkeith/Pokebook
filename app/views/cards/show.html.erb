@@ -1,21 +1,10 @@
 <%= render 'partials/navbar' %>
 
-
-<!-- display the user's name -->
-<p>
-  <strong>User:</strong>
-  <%= @current_user.username %> <br>
-</p>
-
-<!-- display the user's cards -->
-<div class="container">
-
-<p>
-  <% @current_user.cards.each do |c| %>
-  	<h3 class = bold><%= c.name %></h3>
-  	<p>ID: <%= c.card_id %></p>
-    <p>Type: <%= c.types %></p>
-    <p><%= image_tag(c.imageUrl) %></p>
+<!-- display one card -->
+<div class="container center">
+  <%= image_tag(@card.imageUrl) %>
+  <h4 class='bold'><%= @card.name %></h4>
+  <%= link_to "Delete", destroy_card_path(@card) %> |
+  <a href='/404/'>'Give'</a>
   <% end %>
-</p>
 </div>

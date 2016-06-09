@@ -19,4 +19,19 @@ class User < ActiveRecord::Base
       :secret_access_key => ENV['POKESTASH_BUCKET']}
   end
 
+  def add_card(card)
+    if self.cards.find_by(id:card.id)
+      return card
+    else
+      self.cards << card
+    end
+  end
+
+  def remove_card(card)
+    if self.cards.find_by(id:card.id)
+      self.cards.delete(card.id)
+    end
+
+  end
+
 end

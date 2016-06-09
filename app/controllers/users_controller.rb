@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
   protect_from_forgery
   before_action :authorize, only: [:show]
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:index, :cards, :add, :show, :edit, :update, :destroy]
 
   def index
   end
@@ -9,20 +9,34 @@ class UsersController < ApplicationController
   def show
   end
 
+  def cards
+  end
+
   def new
     @user = User.new
+  end
+
+  def add
+  end
+
+  def user_cards
+  end
+
+  def add_card
+    current_user.cards << Card.find(params[:card_id])
+    redirect_to current_user
   end
 
   def create
     @user = User.new(user_params)
     if @user.save
-      redirect_to user_path(@user)
+      redirect_to users_path(@user)
     end
   end
 
   def edit
     if current_user != @user
-      redirect_to users_path
+      redirect_to user_path
     end
   end
 
@@ -49,6 +63,6 @@ private
   end
 
   def user_params
-    params.require(:user).permit(:username, :email, :password, :password_confirmation) #, :avatar)
+    params.require(:user).permit(:username, :email, :password, :password_confirmation, :avatar)
   end
 end

@@ -6,7 +6,7 @@ body {
 }
 
 .padding-where-no-nav {
-  height: 100px;
+  height: 70px;
 }
 
 .jumbotron {
@@ -14,7 +14,7 @@ body {
     background-color: #ffe164;
     margin-bottom: 0;
     font-weight: 800;
-  }
+}
 
 .jumbotron:hover {
   color: #333333;
@@ -51,4 +51,8 @@ a {
 
 .spacer {
   height: 20px;
+}
+
+.center {
+  text-align: center;
 }

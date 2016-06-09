@@ -4,23 +4,23 @@
 
 <div class="row">
 
-  <a href = '/cards/'>
+  <%= link_to user_cards_path do %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="/assets/Pikachu.png" alt="Pikachu">
+        <img src="/assets/Pikachu.png" alt="View Deck">
           <div class="caption">
-          <center><h3>View Deck</h3></center>
-  </a>
+          <h3 class='center'>View Favémon</h3>
+  <% end %>
           </div>
       </div>
     </div>
 
-  <a href = '/cards/new/'>
+  <a href = '/cards/add/'>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="/assets/Eevee.png" alt="Eevee">
+        <img src="/assets/Eevee.png" alt="Add Cards">
           <div class="caption">
-          <center><h3>Add Cards</h3></center>
+          <h3 class='center'>Add Favémon</h3>
   </a>
         </div>
       </div>
@@ -29,9 +29,9 @@
   <%= link_to edit_card_path do %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="/assets/Mewtwo.png" alt="Mewtwo">
+        <img src="/assets/Mewtwo.png" alt="Edit Cards">
         <div class="caption">
-          <center><h3>Edit Cards</h3></center>
+          <h3 class='center'>Edit Favémon</h3>
   <% end %>
         </div>
       </div>
@@ -40,9 +40,9 @@
   <%= link_to edit_user_path do %>
     <div class="col-sm-6 col-md-3">
       <div class="thumbnail">
-        <img src="/assets/Gyarados.png" alt="Gyarados">
+        <img src="/assets/Gyarados.png" alt="Edit Account">
           <div class="caption">
-          <center><h3>Edit Account</h3></center>
+          <h3 class='center'>Edit Account</h3>
   <% end %>
           </div>
       </div>

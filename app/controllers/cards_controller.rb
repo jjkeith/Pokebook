@@ -14,6 +14,10 @@ class CardsController < ApplicationController
     @card = Card.new
   end
 
+  def add
+  end
+
+# This only exists so I can enter new cards without seeding, but it doesn't work
   def create
     @card = Card.new(card_params)
     @card.user = current_user
@@ -38,7 +42,3 @@ class CardsController < ApplicationController
     params.require(:card).permit(:title, :card_id, :types, :imageUrl)
   end
 end
-
-cards/:id/add
-current_user.cards << Card.find(params[:id])
-redirect_to current_user

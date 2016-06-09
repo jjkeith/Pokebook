@@ -3,16 +3,14 @@
 <div class="container">
 
 <div class="row">
-  <center>
-    <h1>Update your profile</h1>
-  </center>
+  <h1 class='center'>Update your profile</h1>
 <div class="spacer"></div>
 
   <div class="row">
     <div class="col-md-3">
       <% provide(:title, "Edit user") %>
       <%= form_for @user, url: edit_user_path do |f| %>
-      <!-- rails: image_tag @user.avatar.url(:medium) %> -->
+      <% image_tag @user.avatar.url(:medium) %>
       <div class="form-group">
           <%= f.label :avatar, 'Update profile pic*', class: 'control-label' %>
           <%= f.file_field :avatar  %>
