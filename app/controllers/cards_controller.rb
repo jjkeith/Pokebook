@@ -15,8 +15,8 @@ class CardsController < ApplicationController
   end
 
   def add
-  #   current_user.add_card(Card.find(params[:id]))
-  #   redirect_to user_path(current_user)
+    current_user.add_card(Card.find(params[:id]))
+    redirect_to user_path(current_user)
   end
 
   # def remove

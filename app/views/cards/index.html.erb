@@ -4,8 +4,6 @@
   <h1>Add to Your Favorites</h1>
 
     <% Card.all.order(:name).in_groups_of(4, false).each do |group| %>
-
-
         <div class='row'>
           <% group.each do |c| %>
             <div class='col-md-3'>

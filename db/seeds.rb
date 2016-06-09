@@ -1,3 +1,4 @@
+Card.destroy_all
 Card.create!(name: "Alakazam", imageUrl: "http://cdn.bulbagarden.net/upload/c/cc/065Alakazam.png")
 Card.create!(name: "Arcanine", imageUrl: "http://cdn.bulbagarden.net/upload/b/b8/059Arcanine.png")
 Card.create!(name: "Articuno", imageUrl: "http://cdn.bulbagarden.net/upload/4/4e/144Articuno.png")
@@ -31,12 +32,10 @@ Card.create!(name: "Snorlax", imageUrl: "http://cdn.bulbagarden.net/upload/f/fb/
 Card.create!(name: "Squirtle", imageUrl: "http://cdn.bulbagarden.net/upload/3/39/007Squirtle.png")
 Card.create!(name: "Suicune", imageUrl: "http://cdn.bulbagarden.net/upload/d/da/245Suicune.png")
 Card.create!(name: "Tyranitar", imageUrl: "http://cdn.bulbagarden.net/upload/8/82/248Tyranitar.png")
-Card.create!(name: "Tyranitar", imageUrl: "http://cdn.bulbagarden.net/upload/8/82/248Tyranitar.png")
 Card.create!(name: "Umbreon", imageUrl: "http://cdn.bulbagarden.net/upload/3/3d/197Umbreon.png")
 Card.create!(name: "Venusaur", imageUrl: "http://cdn.bulbagarden.net/upload/a/ae/003Venusaur.png")
 Card.create!(name: "Zapdos", imageUrl: "http://cdn.bulbagarden.net/upload/e/e3/145Zapdos.png")
 Card.create!(name: "Zygarde", imageUrl: "http://cdn.bulbagarden.net/upload/3/3a/718Zygarde.png")
-
 
 
 
