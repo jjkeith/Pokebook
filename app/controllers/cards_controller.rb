@@ -1,5 +1,7 @@
 class CardsController < ApplicationController
   before_action :authorize
+  before_action :set_user, only: [:index, :cards, :add, :show, :edit, :update, :destroy]
+
 
   def index
     @cards = Card.all
@@ -41,4 +43,9 @@ class CardsController < ApplicationController
   def card_params
     params.require(:card).permit(:title, :card_id, :types, :imageUrl)
   end
+
+  def set_user
+    @user = User.find(params[:id])
+  end
+
 end
