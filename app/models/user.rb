@@ -2,7 +2,6 @@ class User < ActiveRecord::Base
   has_secure_password
   has_and_belongs_to_many :cards
   validates_uniqueness_of :email, :username
-# Paperclip gem allows users to have a pro pic
   has_attached_file :avatar,
                     :storage => :s3,
                     styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png",
@@ -26,14 +25,11 @@ class User < ActiveRecord::Base
       self.cards << card
     end
   end
-  #   def remove_card(card)
-  #     if self.cards.find_by(id:card.id)
-  #       self.cards.delete(card.id)
-  #     end
-  #
-  #   end
-  #
-  # end
 
+  def remove_card(card)
+    if self.cards.find_by(id:card.id)
+        self.cards.delete(card.id)
+      end
+  end
 
 end

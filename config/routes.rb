@@ -13,7 +13,7 @@ Rails.application.routes.draw do
   # user_add_card POST   /users/:id/add_card/:card_id(.:format) users#add_card
   get 'users/:id/user_cards' => 'users#cards', as: :user_cards
   #    user_cards GET    /users/:id/user_cards(.:format)        users#cards
-  #         users GET    /users(.:format)                       users#index 
+  #         users GET    /users(.:format)                       users#index
   #               POST   /users(.:format)                       users#create
   #     new_user  GET    /users/new(.:format)                   users#new
   #     edit_user GET    /users/:id/edit(.:format)              users#edit

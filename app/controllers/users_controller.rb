@@ -18,8 +18,6 @@ class UsersController < ApplicationController
   end
 
   def add_card
-    # current_user.cards << Card.find(params[:card_id])
-    # redirect_to current_user
   end
 
   def create
@@ -29,6 +27,7 @@ class UsersController < ApplicationController
       redirect_to user_path(@user)
     else
       redirect_to root_path
+      alert("Account not saved")
     end
   end
 

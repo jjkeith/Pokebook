@@ -10,10 +10,6 @@ gem 'sass-rails', '~> 5.0'
 # Use bootstrap SASS
 gem 'bootstrap-sass', '~> 3.3.6'
 
-# photo uploads
-gem 'paperclip', :git=> 'https://github.com/thoughtbot/paperclip', :ref => '523bd46c768226893f23889079a7aa9c73b57d68'
-gem 'aws-sdk'
-
 # allows environmental variables
 gem 'dotenv-rails', :groups => [:development, :test]
 

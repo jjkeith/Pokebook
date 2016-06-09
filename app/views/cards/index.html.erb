@@ -3,14 +3,14 @@
 <div class="container">
   <h1>Add to Your Favorites</h1>
 
-    <% Card.all.in_groups_of(3, false).each do |group| %>
+    <% Card.all.order(:name).in_groups_of(4, false).each do |group| %>
 
 
         <div class='row'>
           <% group.each do |c| %>
-            <div class='col-md-4'>
+            <div class='col-md-3'>
               <div class="thumbnail center">
-                <%= image_tag(c.imageUrl, :class => "browse") %>
+                <%= image_tag(c.imageUrl, :class => "card") %>
                 <h3 class='bold'><%= c.name %></h3>
                 <%= link_to "View", card_path(c) %> |
                 <%= link_to 'Add To Favorites', "/cards/#{c.id}/add" %>
