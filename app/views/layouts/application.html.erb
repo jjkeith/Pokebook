@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Pokestash</title>
+  <title>Pokr</title>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-  <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <link href='https://fonts.googleapis.com/css?family=Exo:400,400italic,800,800italic' rel='stylesheet' type='text/css'>
 
 </head>
 <body>
 
-<%= render 'partials/navbar' %>
-
-<div class="page-header yellow">
-<h1>Pokéstash</h1>
-<h3>Gotta catch 'em all</h3>'
-</div>
-
-
-
-<div class="container">
+<%= link_to root_path do %>
+  <div class="jumbotron">
+    <div class="row">
+      <div class="col-md-5 col-md-offset-2">
+        <h1 class='bold'>Pokr</h1>
+      </div>
+      <div class="col-md-5">
+        <p>List your favorite Pokémon,<br>Share your favorites with friends,<br>Meet new friends!</p>
+      </div>
+    </div>
+  </div>
+<% end %>
 
 <%= yield %>
 
-</div>
+<footer class= "footer">
+  <div class="container">
+    <p class = "text-muted">Copyright (c) 2016 JJ Keith All Rights Reserved. </p>
+  </div>
+</footer>
 
 </body>
 </html>

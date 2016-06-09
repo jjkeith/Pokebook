@@ -1,21 +1,52 @@
-<p id="notice"><%= notice %></p>
+<%= render 'partials/navbar' %>
 
-<!-- display the user's name -->
-<p>
-  <strong>User:</strong>
-  <%= @user.username %> <br>
-</p>
+<div class="container">
 
-<!-- display the user's cards -->
-<p>
-  <% @user.cards.each do |c| %>
-  	<h3><%= c.title %></h3>
-  	<p><%= c.card_id %></p>
-    <p><%= c.types %></p>
-    <p><%= c.imageUrl %></p>
+<div class="row">
+
+  <%= link_to user_cards_path do %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img src="/assets/Pikachu.png" alt="View Deck">
+          <div class="caption">
+          <h3 class='center'>View Favorites</h3>
   <% end %>
-</p>
+          </div>
+      </div>
+    </div>
 
-<%= link_to 'Edit', edit_user_path(@user) %><!-- add a link to this user's edit page --> |
-<%= link_to 'Home', users_path %><!-- add a link to the index page --> |
-<%= link_to 'Add user', new_user_path %>
+  <a href = '/cards/'>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img src="/assets/Eevee.png" alt="Add Cards">
+          <div class="caption">
+          <h3 class='center'>Add Favorites</h3>
+  </a>
+        </div>
+      </div>
+    </div>
+
+  <%= link_to edit_card_path do %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img src="/assets/Mewtwo.png" alt="Edit Cards">
+        <div class="caption">
+          <h3 class='center'>Edit Favorites</h3>
+  <% end %>
+        </div>
+      </div>
+    </div>
+
+  <%= link_to edit_user_path do %>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img src="/assets/Gyarados.png" alt="Edit Account">
+          <div class="caption">
+          <h3 class='center'>Edit Account</h3>
+  <% end %>
+          </div>
+      </div>
+    </div>
+
+  </div>
+</div>

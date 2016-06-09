@@ -1,18 +1,27 @@
-#Pokéstash
+#POKR
 
 [link to finished page]
 
 ---
 
-Pokéstash is a web app designed to allow users to store their Pokémon decks online and view others' decks.
+POKR is a web app designed to allow users to store their favorite Pokémon characters online, share their favorites with friends, and make new friends.
+
+
 
 
 ##Screenshots
 
 
+##ERD
+![](ERD.png)
 
 ##Wireframes
 
+![](Pages_Index.png)
+![](User_New.png)
+![](Session_New.png)
+![](User_Show.png)
+![](User_Cards.png)
 
 ##Technologies Used
 - Ruby on Rails
@@ -40,3 +49,8 @@ Just login and start using!
 
 
 ##Unsolved Problems
+
+##Future Improvements
+* Add a database that contains the entire Pokédex
+* The ability for users to "friend" one another
+* A board for users to schedule IRL Pokémon games

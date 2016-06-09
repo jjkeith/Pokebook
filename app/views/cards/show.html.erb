@@ -1,2 +1,15 @@
-<h1>Cards#show</h1>
-<p>Find me in app/views/cards/show.html.erb</p>
+<%= render 'partials/navbar' %>
+<!-- This isn't linked anywhere in the app but it should be -->
+<!-- display one card -->
+
+<div class = "center">
+
+  <h1 class='bold'><%= @card.name %></h1>
+  <%= image_tag(@card.imageUrl, :class => "show")  %>
+<div class = "spacer"></div>
+    <h3 class='center'>
+      <%= link_to "Back", edit_card_path(@card) %> |
+      <%= link_to "Remove from Favorites", destroy_card_path(@card) %> 
+    </h3>
+  <!-- <a href='/404/'>'Give'</a> -->
+</div>

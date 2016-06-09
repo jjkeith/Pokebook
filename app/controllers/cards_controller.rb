@@ -1,6 +1,7 @@
 class CardsController < ApplicationController
   before_action :authorize
 
+
   def index
     @cards = Card.all
   end
@@ -13,6 +14,16 @@ class CardsController < ApplicationController
     @card = Card.new
   end
 
+  def add
+    current_user.add_card(Card.find(params[:id]))
+    redirect_to user_path(current_user)
+  end
+
+  # def remove
+  #
+  # end
+
+# This only exists so I can enter new cards without seeding, but it doesn't work
   def create
     @card = Card.new(card_params)
     @card.user = current_user
