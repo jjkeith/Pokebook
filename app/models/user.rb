@@ -1,7 +1,7 @@
 class User < ActiveRecord::Base
   has_secure_password
   has_and_belongs_to_many :cards
-
+  validates_uniqueness_of :email, :username
 # Paperclip gem allows users to have a pro pic
   has_attached_file :avatar,
                     :storage => :s3,

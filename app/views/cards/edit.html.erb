@@ -2,8 +2,7 @@
 <%= render 'partials/navbar' %>
 
 <div class="container">
-<h1>This is the first container</h1>
-<% @current_user.cards.in_groups_of(6, false).each do |group| %>
+<% current_user.cards.in_groups_of(6, false).each do |group| %>
 
   <div class='row'>
     <% group.each do |c| %>
