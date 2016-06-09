@@ -1,24 +1,76 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
-.navbar {
-    font-family: 'Exo', sans-serif;
-  }
-.page-header .yellow {
-    margin: 0;
-  }
+body {
+  font-family: 'Exo', sans-serif;
+}
 
-.page-header {
-    font-family: 'Exo', sans-serif;
+.padding-where-no-nav {
+  height: 70px;
+}
+
+.jumbotron {
     padding:  10px;
-    background-color: yellow;
-  }
+    background-color: #ffe164;
+    margin-bottom: 0;
+    font-weight: 800;
+}
 
-.logo {
-  padding: 5px;
+.jumbotron:hover {
+  color: #333333;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 .container {
   padding: 10px;
   font-family: 'Exo', sans-serif;
+}
+
+.thumbnail {
+    border: 0 none;
+    box-shadow: none;
+}
+
+.btn-pokemon {
+  background-color: #ffe164
+}
+
+a {
+  color: #333;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.center {
+  text-align: center;
+}
+
+.card {
+  width: 120px;
+}
+
+.browse {
+  width: 300px;
+}
+
+
+
+.show {
+  height: 400px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+footer {
+  padding: 20px;
 }
