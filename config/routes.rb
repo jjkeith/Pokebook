@@ -2,11 +2,8 @@ Rails.application.routes.draw do
 
   root 'pages#index'
 
-  resources :users do
-    member do
-      get :cards
-    end
-  end
+
+  resources :users
 
   patch 'users/:id/edit' => 'users#update'
   #               PATCH  /users/:id(.:format)                   users#update
@@ -16,7 +13,7 @@ Rails.application.routes.draw do
   # user_add_card POST   /users/:id/add_card/:card_id(.:format) users#add_card
   get 'users/:id/user_cards' => 'users#cards', as: :user_cards
   #    user_cards GET    /users/:id/user_cards(.:format)        users#cards
-  #         users GET    /users(.:format)                       users#index
+  #         users GET    /users(.:format)                       users#index 
   #               POST   /users(.:format)                       users#create
   #     new_user  GET    /users/new(.:format)                   users#new
   #     edit_user GET    /users/:id/edit(.:format)              users#edit
@@ -27,9 +24,9 @@ Rails.application.routes.draw do
 
 
   resources :cards
+  get '/cards/:id/add' => 'cards#add', as: :add_card
   delete 'cards/:id' =>   'cards#destroy', as: :destroy_card
 #   destroy_card DELETE /cards/:id(.:format)                   cards#destroy
-  get 'users/cards/' => 'cards#index'
 #          cards GET    /cards(.:format)                       cards#index
 #    users_cards GET    /users/cards(.:format)                 cards#index
 #  user_add_card POST   /users/:id/add_card/:card_id(.:format) users#add_card

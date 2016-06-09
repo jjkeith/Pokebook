@@ -2,18 +2,21 @@
 <%= render 'partials/navbar' %>
 
 <div class="container">
-
+<h1>This is the first container</h1>
 <% @current_user.cards.in_groups_of(6, false).each do |group| %>
+
   <div class='row'>
     <% group.each do |c| %>
       <div class='col-md-2'>
         <div class="thumbnail center">
           <%= image_tag(c.imageUrl, :class => "card") %>
           <h4 class='bold'><%= c.name %></h4>
-          <%= link_to "Delete", destroy_card_path(c) %> |
-          <a href='/404/'>Give</a>
+          <%= link_to "View", card_path(c) %> |
+          <%= link_to "Delete", destroy_card_path(c) %>
+          <!-- <a href='/404/'>Give</a> -->
       </div>
     </div>
     <% end %>
   </div>
 <% end %>
+</div>

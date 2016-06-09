@@ -1,11 +1,9 @@
 class CardsController < ApplicationController
   before_action :authorize
-  before_action :set_user, only: [:index, :cards, :add, :show, :edit, :update, :destroy]
 
 
   def index
     @cards = Card.all
-    @user = @current_user
   end
 
   def show
@@ -17,7 +15,13 @@ class CardsController < ApplicationController
   end
 
   def add
+    current_user.add_card(Card.find(params[:id]))
+    redirect_to user_path(current_user)
   end
+
+  # def remove
+  #
+  # end
 
 # This only exists so I can enter new cards without seeding, but it doesn't work
   def create
@@ -43,9 +47,4 @@ class CardsController < ApplicationController
   def card_params
     params.require(:card).permit(:title, :card_id, :types, :imageUrl)
   end
-
-  def set_user
-    @user = User.find(params[:id])
-  end
-
 end

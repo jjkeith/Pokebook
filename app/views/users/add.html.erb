@@ -1,4 +1,4 @@
-<h1>user/add</h1>
+<h1>user/add_card</h1>
 <%=render 'partials/navbar'
 <!-- create a form -->
 
@@ -9,5 +9,5 @@
 <%= f.select :all_val,  options %>
 
 <%= link_to 'button', user_add_card_path(current_user, Card.first), method: :post %>
- <%= f.collection_select :provider_id, Card.order(:name),:id,:name, include_blank: true %>
+ <%= f.collection_select :user, Card.order(:name),:id,:name, include_blank: true %>
  <% end %>

@@ -1,10 +1,15 @@
 <%= render 'partials/navbar' %>
-
+<!-- This isn't linked anywhere in the app but it should be -->
 <!-- display one card -->
-<div class="container center">
-  <%= image_tag(@card.imageUrl) %>
-  <h4 class='bold'><%= @card.name %></h4>
-  <%= link_to "Delete", destroy_card_path(@card) %> |
-  <a href='/404/'>'Give'</a>
-  <% end %>
+
+<div class = "center">
+
+  <h1 class='bold'><%= @card.name %></h1>
+  <%= image_tag(@card.imageUrl, :class => "show")  %>
+<div class = "spacer"></div>
+    <h3 class='center'>
+      <%= link_to "Back", edit_card_path(@card) %> |
+      <%= link_to "Remove from Favorites", destroy_card_path(@card) %> 
+    </h3>
+  <!-- <a href='/404/'>'Give'</a> -->
 </div>

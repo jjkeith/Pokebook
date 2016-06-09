@@ -1,0 +1,6 @@
+<% @cards.each do |c| %>
+  <ul>
+    <li><%= c.name %> | <%= link_to 'Add To Favorites', "/cards/#{c.id}/add" %></li>
+    <li><%= image_tag c.imageUrl %></li>
+  </ul>
+<% end %>

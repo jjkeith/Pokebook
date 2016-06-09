@@ -26,12 +26,14 @@ class User < ActiveRecord::Base
       self.cards << card
     end
   end
+  #   def remove_card(card)
+  #     if self.cards.find_by(id:card.id)
+  #       self.cards.delete(card.id)
+  #     end
+  #
+  #   end
+  #
+  # end
 
-  def remove_card(card)
-    if self.cards.find_by(id:card.id)
-      self.cards.delete(card.id)
-    end
-
-  end
 
 end
