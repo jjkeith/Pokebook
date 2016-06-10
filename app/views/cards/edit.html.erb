@@ -2,16 +2,22 @@
 <%= render 'partials/navbar' %>
 
 <div class="container">
-<% current_user.cards.in_groups_of(6, false).each do |group| %>
+
+  <h1 class = "center bold" >Edit Your Favorites</h1>
+  <div class="spacer"></div>
+
+<% current_user.cards.order(:name).in_groups_of(6, false).each do |group| %>
 
   <div class='row'>
     <% group.each do |c| %>
       <div class='col-md-2'>
         <div class="thumbnail center">
-          <%= image_tag(c.imageUrl, :class => "card") %>
+          <%= link_to card_path(c) do %>
+            <%= image_tag(c.imageUrl, :class => "card") %>
+          <% end %>
           <h4 class='bold'><%= c.name %></h4>
           <%= link_to "View", card_path(c) %> |
-          <%= link_to "Delete", destroy_card_path(c) %>
+          <%= link_to 'Remove from Favorites', "/cards/#{c.id}/destroy" %>
       </div>
     </div>
     <% end %>

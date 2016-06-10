@@ -48,7 +48,10 @@ POKR is a web app designed to allow users to store their favorite Pokémon chara
 Just login and start using!
 
 
-##Unsolved Problems
+##Known Issues
+* When adding a new card to favorites, a JaveScript-based alert would be better than redirecting back to the user_path.
+* There is no filtering on the images that users add to ensure that it is a Pokémon.
+
 
 ##Future Improvements
 * Add a database that contains the entire Pokédex

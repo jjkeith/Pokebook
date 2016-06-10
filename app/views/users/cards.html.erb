@@ -1,7 +1,11 @@
-<!-- display the user's cards -->
+<!-- display the user's favorite cards -->
 <%= render 'partials/navbar' %>
 
 <div class="container">
+
+  <h1 class = "center bold" >Your Favorites</h1>
+  <div class="spacer"></div>
+
 <% current_user.cards.in_groups_of(4, false).each do |group| %>
   <div class='row'>
     <% group.each do |c| %>

@@ -1,7 +1,8 @@
 <%= render 'partials/navbar' %>
 
 <div class="container">
-  <h1>Add to Your Favorites</h1>
+  <h1 class = "center bold" >Browse Favorites</h1>
+  <div class="spacer"></div>
 
     <% Card.all.order(:name).in_groups_of(4, false).each do |group| %>
         <div class='row'>

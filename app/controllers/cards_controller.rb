@@ -19,14 +19,15 @@ class CardsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  # def remove
-  #
-  # end
+  def destroy
+    current_user.destroy_card(Card.find(params[:id]))
+    redirect_to user_path(current_user)
+  end
 
 # This only exists so I can enter new cards without seeding, but it doesn't work
   def create
     @card = Card.new(card_params)
-    @card.user = current_user
+    @card.users = current_user
     if @card.save
       redirect_to card_path(@card)
     else
@@ -38,9 +39,6 @@ class CardsController < ApplicationController
   end
 
   def update
-  end
-
-  def destroy
   end
 
   private

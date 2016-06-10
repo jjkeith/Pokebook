@@ -25,7 +25,7 @@ Rails.application.routes.draw do
 
   resources :cards
   get '/cards/:id/add' => 'cards#add', as: :add_card
-  delete 'cards/:id' =>   'cards#destroy', as: :destroy_card
+  get 'cards/:id/destroy' =>   'cards#destroy', as: :destroy_card
 #   destroy_card DELETE /cards/:id(.:format)                   cards#destroy
 #          cards GET    /cards(.:format)                       cards#index
 #    users_cards GET    /users/cards(.:format)                 cards#index
