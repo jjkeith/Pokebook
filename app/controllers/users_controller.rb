@@ -26,8 +26,7 @@ class UsersController < ApplicationController
       session[:user_id] = @user.id
       redirect_to user_path(@user)
     else
-      redirect_to root_path
-      alert("Account not saved")
+      redirect_to error_path
     end
   end
 
@@ -41,7 +40,7 @@ class UsersController < ApplicationController
     if @user.update_attributes(user_params)
       redirect_to user_path(current_user)
     else
-      redirect_to edit_user(current_user)
+      redirect_to error_path
     end
   end
 

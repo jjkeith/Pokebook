@@ -22,7 +22,8 @@ Rails.application.routes.draw do
   #               DELETE /users/:id(.:format)                   users#destroy
   #               PATCH  /users/:id/edit(.:format)              users#update
 
-  get '404', :to => 'application#page_not_found', as: :error
+  get '404', :to => 'application#page_not_found', as: :not_found
+  get '422', :to => 'application#page_not_found', as: :error
 
   resources :cards
   get '/cards/:id/add' => 'cards#add', as: :add_card
@@ -57,5 +58,6 @@ Rails.application.routes.draw do
         #   sessions POST   /sessions(.:format)                 sessions#create
         #new_session GET    /sessions/new(.:format)                sessions#new
   resources :sessions, only: [:new, :create]
+
 
 end
