@@ -17,7 +17,7 @@
           <% end %>
           <h4 class='bold'><%= c.name %></h4>
           <%= link_to "View", card_path(c) %> |
-          <%= link_to 'Remove from Favorites', "/cards/#{c.id}/destroy" %>
+          <%= link_to 'Remove', "/cards/#{c.id}/destroy" %>
       </div>
     </div>
     <% end %>

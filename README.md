@@ -51,6 +51,7 @@ Just login and start using!
 ##Known Issues
 * When adding a new card to favorites, a JaveScript-based alert would be better than redirecting back to the user_path.
 * There is no filtering on the images that users add to ensure that it is a Pokémon.
+* A link to "Home" appears in the navbar on the user's "Home" page
 
 
 ##Future Improvements
