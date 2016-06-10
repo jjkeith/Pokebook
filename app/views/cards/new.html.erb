@@ -1,45 +1,36 @@
 <%= render 'partials/navbar' %>
 
 <h1 class = "center bold">Upload a New Pokémon</h1>
-
-<%= form_for @card do |f| %>
-	<%= f.label :name %>
-	<%= f.text_field :name %>
-
-  <%= f.label :imageUrl %>
-  <%= f.text_field :imageUrl %>
-
-	<div class="form-group">
-			<div class="col-md-8 col-md-offset-4">
-					<%= submit_tag 'Log in', class: 'btn btn-pokemon' %>
-
-			</div>
-	</div>
-
-
-<% end %>
-
-
-<%= form_tag sessions_path,{:class => 'form-horizontal'} do %>
-
-    <fieldset>
+<div class="spacer"></div>
+<%= form_for @card, url: '/cards/', html: { multipart: true },:class => 'form-horizontal' do |f| %>
+		<div class="row">
+			<div class="col-md-2 col-md-offset-3">
+    		<fieldset>
+	    		<div class="form-group">
+	        	<%= f.label :name, "Name", class: 'col-md-4 control-label' %>
+					</div>
+				</div>
+			  <div class="col-md-4">
+		        <%= f.text_field :name, class: 'form-control' %>
+		    </div>
+		</div>
+			<div class = "row">
+				<div class="col-md-2 col-md-offset-3">
+	    	<div class="form-group">
+	        <%= f.label :imageUrl, 'Image URL', class: 'col-md-4 control-label' %>
+				</div>
+				</div>
+					<div class="col-md-4">
+		      	<%= f.text_field :imageUrl, class: 'form-control' %>
+		    	</div>
+	    	</div>
+			<div class = "row">
 	    <div class="form-group">
-	        <%= label_tag :email, 'Email', class: 'col-md-4 control-label' %>
-		    <div class="col-md-5">
-		        <%= text_field_tag :email, params[:email], class: 'form-control' %>
+	      <div class="col-md-6 col-md-offset-3">
+	        <%= f.submit 'Submit', class: 'btn btn-pokemon' %>
 		    </div>
 	    </div>
-	    <div class="form-group">
-	        <%= label_tag :password, 'Password', class: 'col-md-4 control-label' %>
-		    <div class="col-md-5">
-		        <%= password_field_tag :password, nil, class: 'form-control' %>
-		    </div>
-	    </div>
-	    <div class="form-group">
-	        <div class="col-md-8 col-md-offset-4">
-	            <%= submit_tag 'Log in', class: 'btn btn-pokemon' %>
-		        <%= link_to "Don't have an account?", new_user_path, class: 'btn btn-pokemon' %>
-	        </div>
-	    </div>
+		</div>
+<div class="spacer"></div>
     </fieldset>
-<% end %>
+	<% end %>

@@ -22,10 +22,12 @@ Rails.application.routes.draw do
   #               DELETE /users/:id(.:format)                   users#destroy
   #               PATCH  /users/:id/edit(.:format)              users#update
 
+  get '404', :to => 'application#page_not_found', as: :error
 
   resources :cards
   get '/cards/:id/add' => 'cards#add', as: :add_card
   get 'cards/:id/destroy' =>   'cards#destroy', as: :destroy_card
+  post 'users/:id/user_cards' => 'cards#new'
 #   destroy_card DELETE /cards/:id(.:format)                   cards#destroy
 #          cards GET    /cards(.:format)                       cards#index
 #    users_cards GET    /users/cards(.:format)                 cards#index

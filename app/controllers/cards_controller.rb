@@ -11,7 +11,7 @@ class CardsController < ApplicationController
   end
 
   def new
-    @card = Card.new
+    @card = Card.new(params[:id])
   end
 
   def add
@@ -24,14 +24,12 @@ class CardsController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-# This only exists so I can enter new cards without seeding, but it doesn't work
   def create
     @card = Card.new(card_params)
-    @card.users = current_user
     if @card.save
-      redirect_to card_path(@card)
+      redirect_to '/cards/'
     else
-      redirect_to new_card_path
+      redirect_to error_path
     end
   end
 
@@ -39,10 +37,16 @@ class CardsController < ApplicationController
   end
 
   def update
+    # @card = Card.new
+    # if @card.update_attributes(card_params)
+    #   redirect_to card_path(@card)
+    # else
+    #   redirect_to error_path
+    # end
   end
 
   private
   def card_params
-    params.require(:card).permit(:title, :card_id, :types, :imageUrl)
+    params.require(:card).permit(:name, :imageUrl)
   end
 end
