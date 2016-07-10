@@ -1,6 +1,6 @@
 #Pokébook
 
-https://frozen-reef-24530.herokuapp.com/
+http://pokemon-book.herokuapp.com
 
 ---
 
