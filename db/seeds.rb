@@ -67,7 +67,6 @@ Card.create!(name: "Rayquaza", imageUrl: "http://cdn.bulbagarden.net/upload/e/e4
 Card.create!(name: "Salamence", imageUrl: "http://cdn.bulbagarden.net/upload/4/41/373Salamence.png")
 Card.create!(name: "Scatterbug", imageUrl: "http://cdn.bulbagarden.net/upload/d/d3/664Scatterbug.png")
 Card.create!(name: "Scizor", imageUrl: "http://cdn.bulbagarden.net/upload/5/55/212Scizor.png")
-Card.create!(name: "Scizor", imageUrl: "http://cdn.bulbagarden.net/upload/5/55/212Scizor.png")
 Card.create!(name: "Scraggy", imageUrl: "http://cdn.bulbagarden.net/upload/d/dc/559Scraggy.png")
 Card.create!(name: "Scyther", imageUrl: "http://cdn.bulbagarden.net/upload/b/ba/123Scyther.png")
 Card.create!(name: "Seel", imageUrl: "http://cdn.bulbagarden.net/upload/1/1f/086Seel.png")

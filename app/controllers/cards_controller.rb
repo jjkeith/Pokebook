@@ -1,7 +1,6 @@
 class CardsController < ApplicationController
   before_action :authorize
 
-
   def index
     @cards = Card.all
   end
@@ -16,7 +15,7 @@ class CardsController < ApplicationController
 
   def add
     current_user.add_card(Card.find(params[:id]))
-    redirect_to user_path(current_user)
+    redirect_to cards_path, :flash => { :success => "Card added." }
   end
 
   def destroy
@@ -25,24 +24,18 @@ class CardsController < ApplicationController
   end
 
   def create
-    @card = Card.new(card_params)
-    if @card.save
-      redirect_to '/cards/'
-    else
-      redirect_to error_path
-    end
+      @card = Card.new(card_params)
+      if @card.save
+        redirect_to '/cards/'
+      else
+        render :new
+      end
   end
 
   def edit
   end
 
   def update
-    # @card = Card.new
-    # if @card.update_attributes(card_params)
-    #   redirect_to card_path(@card)
-    # else
-    #   redirect_to error_path
-    # end
   end
 
   private

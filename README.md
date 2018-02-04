@@ -48,9 +48,11 @@ Pokébook users can create and maintain a list of their favorite Pokémon.
 
 ## Installation
 
-Just log in and start using!
+Just sign in and start using!
 
 
+##Known Issues
+=======
 ## Known Issues
 * When adding a new card to favorites, a JaveScript-based alert ("Card added") would be better than redirecting back to the user_path.
 * There is no filtering on the images that users add to ensure that they are of  Pokémon.

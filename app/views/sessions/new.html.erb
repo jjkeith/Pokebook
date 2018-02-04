@@ -1,5 +1,13 @@
 <div class = "padding-where-no-nav"></div>
 <%= form_tag sessions_path,{:class => 'form-horizontal'} do %>
+
+<% if flash[:error] %>
+	<div class=' alert alert-danger'> <%= flash[:error] %></div>
+	<script>
+		$(".alert").delay(3000).slideUp()
+	</script>
+<% end %>
+
 	<div class="row"><legend class="col-md-4 col-md-offset-4">Sign In:</legend></div>
     <fieldset>
 	    <div class="form-group">
@@ -16,7 +24,7 @@
 	    </div>
 	    <div class="form-group">
 	        <div class="col-md-8 col-md-offset-4">
-	            <%= submit_tag 'Log in', class: 'btn btn-pokemon' %>
+	            <%= submit_tag 'Sign in', class: 'btn btn-pokemon' %>
 		        <%= link_to "Don't have an account?", new_user_path, class: 'btn btn-pokemon' %>
 	        </div>
 	    </div>
